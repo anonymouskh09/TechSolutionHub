@@ -5,7 +5,7 @@ import { ArrowLeft } from "lucide-react";
 import { caseStudies, getCaseStudyBySlug } from "@/lib/data/case-studies";
 import { BreadcrumbSchema } from "@/components/shared/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/lib/utils";
+import { createPageMetadata } from "@/lib/metadata";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -20,11 +20,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const study = getCaseStudyBySlug(slug);
   if (!study) return { title: "Case Study Not Found" };
 
-  return {
-    title: study.title,
-    description: study.excerpt,
-    alternates: { canonical: `${siteConfig.url}/case-studies/${slug}` },
-  };
+  return createPageMetadata(
+    `${study.title} | TechSolutionHub Case Study`,
+    study.excerpt,
+    `/case-studies/${slug}`
+  );
 }
 
 export default async function CaseStudyDetailPage({ params }: Props) {

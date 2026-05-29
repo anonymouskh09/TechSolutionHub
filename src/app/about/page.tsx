@@ -10,8 +10,8 @@ import { Button } from "@/components/ui/button";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata(
-  "About Us",
-  "Learn about TechSolutionHub — our mission, values, and international expertise in AI automation and software development.",
+  "About TechSolutionHub | Modern Technology & AI Automation Company",
+  "Learn about TechSolutionHub, a modern technology company helping businesses scale with AI automation, web development, SEO, and smart digital systems.",
   "/about"
 );
 

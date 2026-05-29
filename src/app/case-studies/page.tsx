@@ -8,8 +8,8 @@ import { CTABanner } from "@/components/sections/CTABanner";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata(
-  "Case Studies",
-  "Real results from TechSolutionHub clients — AI automation, web development, and international SEO success stories.",
+  "Case Studies | TechSolutionHub Digital Project Results",
+  "Explore TechSolutionHub case studies showing modern websites, AI platforms, automation systems, and business-focused digital solutions.",
   "/case-studies"
 );
 

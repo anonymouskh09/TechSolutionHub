@@ -30,7 +30,7 @@ export function PortfolioCard({ project, index = 0 }: PortfolioCardProps) {
           <Image
             key={project.slug}
             src={project.image}
-            alt={`${project.title} project screenshot`}
+            alt={`TechSolutionHub ${project.title} web development project screenshot`}
             fill
             unoptimized
             className="object-cover object-top transition-transform duration-500 group-hover:scale-105"

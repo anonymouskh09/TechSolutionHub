@@ -1,30 +1,48 @@
 import type { Metadata } from "next";
+import { getSiteUrl } from "@/lib/site-url";
 import { siteConfig } from "@/lib/utils";
+
+const siteUrl = getSiteUrl();
+
+const defaultDescription =
+  "TechSolutionHub helps businesses grow with AI automation, modern websites, SEO, chatbots, calling agents, GHL pipelines, and workflow automation.";
+
+const ogImage = {
+  url: "/og-image.png",
+  width: 1200,
+  height: 630,
+  alt: "TechSolutionHub — AI automation and web development agency",
+};
 
 export const defaultMetadata: Metadata = {
   title: {
-    template: "%s | TechSolutionHub",
-    default: "TechSolutionHub — AI Automation & Web Development Agency",
+    absolute:
+      "TechSolutionHub | AI Automation, Web Development & Digital Solutions",
   },
-  description: siteConfig.description,
+  description: defaultDescription,
   keywords: siteConfig.keywords,
   authors: [{ name: "TechSolutionHub" }],
   creator: "TechSolutionHub",
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: siteUrl,
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: siteConfig.url,
+    url: siteUrl,
     siteName: "TechSolutionHub",
-    title: "TechSolutionHub — AI Automation & Web Development",
-    description: siteConfig.description,
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+    title:
+      "TechSolutionHub | AI Automation, Web Development & Digital Solutions",
+    description: defaultDescription,
+    images: [ogImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TechSolutionHub",
-    description: siteConfig.description,
-    images: ["/og-image.png"],
+    title:
+      "TechSolutionHub | AI Automation, Web Development & Digital Solutions",
+    description: defaultDescription,
+    images: [ogImage.url],
   },
   robots: {
     index: true,
@@ -37,24 +55,37 @@ export const defaultMetadata: Metadata = {
   },
   icons: {
     icon: [{ url: "/favicon.ico", sizes: "any" }],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
 };
 
 export function createPageMetadata(
   title: string,
-  description?: string,
+  description: string,
   path = ""
 ): Metadata {
-  const url = `${siteConfig.url}${path}`;
+  const base = getSiteUrl();
+  const url = path ? `${base}${path.startsWith("/") ? path : `/${path}`}` : base;
+
   return {
-    title,
-    description: description ?? siteConfig.description,
+    title: { absolute: title },
+    description,
     alternates: { canonical: url },
     openGraph: {
-      title: `${title} | TechSolutionHub`,
-      description: description ?? siteConfig.description,
+      type: "website",
+      siteName: "TechSolutionHub",
+      title,
+      description,
       url,
+      images: [ogImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImage.url],
     },
   };
 }

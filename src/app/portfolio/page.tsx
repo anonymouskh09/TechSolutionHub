@@ -6,8 +6,8 @@ import { CTABanner } from "@/components/sections/CTABanner";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata(
-  "Portfolio — Our Work",
-  "Explore our portfolio of AI automation, web development, Shopify, and SaaS projects for clients worldwide.",
+  "Portfolio | TechSolutionHub Projects & Case Studies",
+  "View TechSolutionHub portfolio projects including web development, AI platforms, e-commerce stores, news websites, and digital solutions.",
   "/portfolio"
 );
 

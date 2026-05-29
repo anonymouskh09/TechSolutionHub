@@ -9,7 +9,7 @@ import {
 } from "@/lib/data/portfolio";
 import { BreadcrumbSchema } from "@/components/shared/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/lib/utils";
+import { createPageMetadata } from "@/lib/metadata";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -24,13 +24,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = getPortfolioBySlug(slug);
   if (!project) return { title: "Project Not Found" };
 
-  return {
-    title: project.title,
-    description: project.description,
-    alternates: {
-      canonical: `${siteConfig.url}/portfolio/${slug}`,
-    },
-  };
+  return createPageMetadata(
+    `${project.title} | TechSolutionHub Portfolio`,
+    project.description,
+    `/portfolio/${slug}`
+  );
 }
 
 export default async function PortfolioDetailPage({ params }: Props) {

@@ -9,8 +9,8 @@ import { createPageMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/utils";
 
 export const metadata: Metadata = createPageMetadata(
-  "Contact Us",
-  "Get in touch with TechSolutionHub for AI automation, web development, and consulting. We reply within 24 hours.",
+  "Contact TechSolutionHub | Start Your Digital Project",
+  "Contact TechSolutionHub to discuss AI automation, website development, SEO, chatbots, calling agents, GHL pipelines, and digital solutions.",
   "/contact"
 );
 

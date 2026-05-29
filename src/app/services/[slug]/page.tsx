@@ -8,6 +8,9 @@ import { PageHeader } from "@/components/shared/PageHeader";
 import { BreadcrumbSchema } from "@/components/shared/BreadcrumbSchema";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { Button } from "@/components/ui/button";
+import { createPageMetadata } from "@/lib/metadata";
+import { serviceSeo } from "@/lib/seo-services";
+import { getSiteUrl } from "@/lib/site-url";
 import { siteConfig } from "@/lib/utils";
 
 interface Props {
@@ -23,17 +26,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = getServiceBySlug(slug);
   if (!service) return { title: "Service Not Found" };
 
-  const url = `${siteConfig.url}/services/${slug}`;
-  return {
-    title: service.title,
-    description: service.description,
-    alternates: { canonical: url },
-    openGraph: {
-      title: `${service.title} | TechSolutionHub`,
-      description: service.description,
-      url,
-    },
-  };
+  const seo = serviceSeo[slug];
+  const title =
+    seo?.title ?? `${service.title} Services | TechSolutionHub`;
+  const description = seo?.description ?? service.description;
+
+  return createPageMetadata(title, description, `/services/${slug}`);
 }
 
 export default async function ServiceDetailPage({ params }: Props) {
@@ -52,7 +50,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       name: "TechSolutionHub",
     },
     description: service.description,
-    url: `${siteConfig.url}/services/${slug}`,
+    url: `${getSiteUrl()}/services/${slug}`,
   };
 
   return (

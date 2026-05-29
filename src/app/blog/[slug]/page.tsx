@@ -5,7 +5,7 @@ import { ArrowLeft } from "lucide-react";
 import { blogPosts, getBlogPostBySlug } from "@/lib/data/blog";
 import { BreadcrumbSchema } from "@/components/shared/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/lib/utils";
+import { createPageMetadata } from "@/lib/metadata";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -20,11 +20,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getBlogPostBySlug(slug);
   if (!post) return { title: "Post Not Found" };
 
-  return {
-    title: post.title,
-    description: post.excerpt,
-    alternates: { canonical: `${siteConfig.url}/blog/${slug}` },
-  };
+  return createPageMetadata(
+    `${post.title} | TechSolutionHub Blog`,
+    post.excerpt,
+    `/blog/${slug}`
+  );
 }
 
 export default async function BlogPostPage({ params }: Props) {

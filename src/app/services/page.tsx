@@ -7,8 +7,8 @@ import { CTABanner } from "@/components/sections/CTABanner";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata(
-  "Our Services — AI & Web Solutions",
-  "Explore all 12 services: AI automation, chatbots, Next.js development, Shopify, SEO, GHL, n8n workflows, cloud deployment, and SaaS.",
+  "Services | AI Automation, Web Development, SEO & Workflow Automation",
+  "Explore TechSolutionHub services including AI automation, chatbots, calling agents, SEO, GHL pipeline setup, web development, API integrations, and cloud deployment.",
   "/services"
 );
 
