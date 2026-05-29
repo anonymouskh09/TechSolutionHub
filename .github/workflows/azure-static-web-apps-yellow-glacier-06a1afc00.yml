@@ -54,7 +54,8 @@ jobs:
           action: "upload"
           app_location: "/"
           api_location: ""
-          output_location: "build"
+          output_location: ".next"
+          skip-app-build: true
           github_id_token: ${{ steps.idtoken.outputs.result }}
 
   close_pull_request_job:
