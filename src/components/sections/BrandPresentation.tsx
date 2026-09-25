@@ -17,7 +17,7 @@ const highlights = [
   {
     icon: Globe2,
     title: "Global Delivery",
-    text: "Serving clients across US, UK, UAE, Pakistan, and Europe.",
+    text: "Serving clients across the US, UK, Canada, Australia, UAE & Europe.",
   },
   {
     icon: Target,
@@ -64,8 +64,8 @@ export function BrandPresentation() {
             transition={{ delay: 0.2 }}
             className="mx-auto mt-4 max-w-2xl text-muted-foreground"
           >
-            Premium international AI automation agency and software house —
-            engineered to help modern businesses innovate, automate, and scale.
+            A global software development and AI automation agency — helping
+            businesses worldwide innovate, automate, and scale.
           </motion.p>
         </div>
 
@@ -93,7 +93,7 @@ export function BrandPresentation() {
               <div className="flex min-h-[280px] flex-col items-center justify-center rounded-2xl bg-gradient-to-br from-slate-50 to-white px-6 py-10 md:min-h-[320px]">
                 <Image
                   src="/logo/logo-full.jpg"
-                  alt="TechSolutionHub — Innovate, Automate, Scale"
+                  alt="TechSolutionHub logo — Innovate, Automate, Scale"
                   width={480}
                   height={280}
                   className="h-auto w-full max-w-md object-contain"
@@ -138,7 +138,7 @@ export function BrandPresentation() {
                     <item.icon className="h-5 w-5 text-white" strokeWidth={2} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-dark">{item.title}</h4>
+                    <h3 className="font-bold text-dark">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.text}</p>
                   </div>
                 </motion.li>

@@ -10,9 +10,15 @@ import { cn } from "@/lib/utils";
 interface ServiceCardProps {
   service: Service;
   index?: number;
+  /** Use "h2" when the card sits directly under the page H1 */
+  headingLevel?: "h2" | "h3";
 }
 
-export function ServiceCard({ service, index = 0 }: ServiceCardProps) {
+export function ServiceCard({
+  service,
+  index = 0,
+  headingLevel: Heading = "h3",
+}: ServiceCardProps) {
   const Icon = serviceIcons[service.icon];
 
   return (
@@ -30,9 +36,9 @@ export function ServiceCard({ service, index = 0 }: ServiceCardProps) {
       <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-brand">
         <Icon className="h-6 w-6 text-white" aria-hidden />
       </div>
-      <h3 className="mb-2 text-lg font-bold tracking-tight text-dark">
+      <Heading className="mb-2 text-lg font-bold tracking-tight text-dark">
         {service.title}
-      </h3>
+      </Heading>
       <p className="mb-4 flex-1 text-sm leading-relaxed text-muted-foreground line-clamp-2">
         {service.description}
       </p>

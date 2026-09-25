@@ -17,7 +17,7 @@ const quickLinks = [
 ];
 
 export function Footer() {
-  const footerServices = services.slice(0, 6);
+  const footerServices = services.slice(0, 8);
 
   return (
     <footer className="bg-dark text-white" aria-label="Site footer">
@@ -26,7 +26,7 @@ export function Footer() {
           <div>
             <Logo variant="light" showTagline className="mb-4" />
             <p className="mb-6 text-sm leading-relaxed text-white/70">
-              Premium international AI automation agency and software house.
+              Global software development and AI automation agency.
             </p>
             <SocialLinks
               iconClassName="border-white/20 text-white/70 hover:border-primary hover:bg-primary/20 hover:text-white"
@@ -34,7 +34,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-bold tracking-wide uppercase">Quick Links</h3>
+            <h2 className="mb-4 text-sm font-bold tracking-wide uppercase">Quick Links</h2>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
@@ -50,7 +50,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-bold tracking-wide uppercase">Services</h3>
+            <h2 className="mb-4 text-sm font-bold tracking-wide uppercase">Services</h2>
             <ul className="space-y-2">
               {footerServices.map((service) => (
                 <li key={service.slug}>
@@ -66,7 +66,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-bold tracking-wide uppercase">Contact</h3>
+            <h2 className="mb-4 text-sm font-bold tracking-wide uppercase">Contact</h2>
             <ul className="space-y-3 text-sm text-white/70">
               <li>
                 <a

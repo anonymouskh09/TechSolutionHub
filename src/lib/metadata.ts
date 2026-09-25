@@ -4,25 +4,26 @@ import { siteConfig } from "@/lib/utils";
 
 const siteUrl = getSiteUrl();
 
-const defaultDescription =
-  "TechSolutionHub helps businesses grow with AI automation, modern websites, SEO, chatbots, calling agents, GHL pipelines, and workflow automation.";
+const defaultTitle =
+  "Global Software & AI Automation Agency | TechSolutionHub";
 
-const ogImage = {
-  url: "/og-image.png",
+const defaultDescription =
+  "AI automation, chatbots, web & mobile apps, custom software and SEO for businesses in the US, UK, Canada, Australia, UAE & EU. Get a free quote today.";
+
+export const ogImage = {
+  url: "/og/og-default.png",
   width: 1200,
   height: 630,
-  alt: "TechSolutionHub — AI automation and web development agency",
+  alt: "TechSolutionHub — global software development and AI automation agency",
 };
 
 export const defaultMetadata: Metadata = {
-  title: {
-    absolute:
-      "TechSolutionHub | AI Automation, Web Development & Digital Solutions",
-  },
+  title: { absolute: defaultTitle },
   description: defaultDescription,
   keywords: siteConfig.keywords,
-  authors: [{ name: "TechSolutionHub" }],
-  creator: "TechSolutionHub",
+  authors: [{ name: siteConfig.name }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
   metadataBase: new URL(siteUrl),
   alternates: {
     canonical: siteUrl,
@@ -31,18 +32,16 @@ export const defaultMetadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-    siteName: "TechSolutionHub",
-    title:
-      "TechSolutionHub | AI Automation, Web Development & Digital Solutions",
+    siteName: siteConfig.name,
+    title: defaultTitle,
     description: defaultDescription,
     images: [ogImage],
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "TechSolutionHub | AI Automation, Web Development & Digital Solutions",
+    title: defaultTitle,
     description: defaultDescription,
-    images: [ogImage.url],
+    images: [{ url: ogImage.url, alt: ogImage.alt }],
   },
   robots: {
     index: true,
@@ -51,20 +50,23 @@ export const defaultMetadata: Metadata = {
       index: true,
       follow: true,
       "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
-  icons: {
-    icon: [{ url: "/favicon.ico", sizes: "any" }],
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
-  },
 };
+
+interface PageMetadataOptions {
+  /** Keep the page out of search results (e.g. placeholder content) */
+  noIndex?: boolean;
+  /** Open Graph type — defaults to "website" */
+  ogType?: "website" | "article";
+}
 
 export function createPageMetadata(
   title: string,
   description: string,
-  path = ""
+  path = "",
+  { noIndex = false, ogType = "website" }: PageMetadataOptions = {}
 ): Metadata {
   const base = getSiteUrl();
   const url = path ? `${base}${path.startsWith("/") ? path : `/${path}`}` : base;
@@ -73,9 +75,11 @@ export function createPageMetadata(
     title: { absolute: title },
     description,
     alternates: { canonical: url },
+    ...(noIndex && { robots: { index: false, follow: true } }),
     openGraph: {
-      type: "website",
-      siteName: "TechSolutionHub",
+      type: ogType,
+      locale: "en_US",
+      siteName: siteConfig.name,
       title,
       description,
       url,
@@ -85,7 +89,7 @@ export function createPageMetadata(
       card: "summary_large_image",
       title,
       description,
-      images: [ogImage.url],
+      images: [{ url: ogImage.url, alt: ogImage.alt }],
     },
   };
 }

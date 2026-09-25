@@ -3,15 +3,14 @@ import Link from "next/link";
 import { Bot, Eye, Gauge, Shield } from "lucide-react";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { BreadcrumbSchema } from "@/components/shared/BreadcrumbSchema";
-import { StatsCounter } from "@/components/sections/StatsCounter";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { Button } from "@/components/ui/button";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata(
-  "About TechSolutionHub | Modern Technology & AI Automation Company",
-  "Learn about TechSolutionHub, a modern technology company helping businesses scale with AI automation, web development, SEO, and smart digital systems.",
+  "About Us | Global Software & AI Agency | TechSolutionHub",
+  "Meet TechSolutionHub, a remote-first software and AI automation agency serving the US, UK, Canada, Australia, UAE and Europe. Learn how we work.",
   "/about"
 );
 
@@ -42,7 +41,7 @@ export default function AboutPage() {
       />
       <PageHeader
         title="About TechSolutionHub"
-        description="Premium international AI automation agency and software house"
+        description="A global software development and AI automation agency"
       />
 
       <SectionWrapper className="bg-white py-12 md:py-20">
@@ -100,8 +99,8 @@ export default function AboutPage() {
               International Experience
             </h2>
             <p className="leading-relaxed text-muted-foreground">
-              We serve clients across the United States, United Kingdom, UAE,
-              Pakistan, and Europe. Our remote-first team delivers 24/7 support
+              We serve clients across the United States, United Kingdom, Canada,
+              Australia, UAE, and Europe. Our remote-first team delivers 24/7 support
               with timezone-flexible communication and culturally aware
               solutions for global markets.
             </p>
@@ -113,7 +112,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-3xl px-4 text-center md:px-6">
           <h2 className="mb-6 text-2xl font-bold text-dark">Tech Capabilities</h2>
           <p className="leading-relaxed text-muted-foreground">
-            From Next.js 15 and TypeScript to OpenAI, n8n, Shopify, AWS, and
+            From Next.js and TypeScript to OpenAI, n8n, Shopify, AWS, and
             Vercel—we architect full-stack solutions that are fast, secure, and
             built to scale. Explore our complete stack on the Technologies page.
           </p>
@@ -123,7 +122,6 @@ export default function AboutPage() {
         </div>
       </SectionWrapper>
 
-      <StatsCounter />
       <CTABanner />
 
       <SectionWrapper className="bg-white py-12 text-center md:py-16">

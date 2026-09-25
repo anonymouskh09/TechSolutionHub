@@ -5,15 +5,18 @@ import { ServicesOverview } from "@/components/sections/ServicesOverview";
 import { AIShowcase } from "@/components/sections/AIShowcase";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { PortfolioPreview } from "@/components/sections/PortfolioPreview";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { StatsCounter } from "@/components/sections/StatsCounter";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { FAQ } from "@/components/sections/FAQ";
 import { ContactCTA } from "@/components/sections/ContactCTA";
+import { JsonLd } from "@/components/shared/JsonLd";
+import { websiteSchema } from "@/lib/schema";
 
+// Testimonials and StatsCounter are intentionally not rendered until real,
+// verifiable client reviews and figures are available.
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={websiteSchema} />
       <Hero />
       <TrustedBadges />
       <BrandPresentation />
@@ -21,8 +24,6 @@ export default function HomePage() {
       <AIShowcase />
       <ProcessTimeline />
       <PortfolioPreview />
-      <Testimonials />
-      <StatsCounter />
       <CTABanner />
       <FAQ />
       <ContactCTA />

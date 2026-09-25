@@ -20,11 +20,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getBlogPostBySlug(slug);
   if (!post) return { title: "Post Not Found" };
 
-  return createPageMetadata(
-    `${post.title} | TechSolutionHub Blog`,
-    post.excerpt,
-    `/blog/${slug}`
-  );
+  // TODO: remove noIndex once the full article is published.
+  return createPageMetadata(post.title, post.excerpt, `/blog/${slug}`, {
+    noIndex: true,
+    ogType: "article",
+  });
 }
 
 export default async function BlogPostPage({ params }: Props) {

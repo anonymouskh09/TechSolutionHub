@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
@@ -9,8 +9,7 @@ import { LoadingScreen } from "@/components/layout/LoadingScreen";
 import { PageTransition } from "@/components/layout/PageTransition";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { defaultMetadata } from "@/lib/metadata";
-import { getSiteUrl } from "@/lib/site-url";
-import { siteConfig } from "@/lib/utils";
+import { organizationSchema } from "@/lib/schema";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,56 +19,8 @@ const inter = Inter({
 
 export const metadata: Metadata = defaultMetadata;
 
-const siteUrl = getSiteUrl();
-
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "TechSolutionHub",
-  url: siteUrl,
-  logo: `${siteUrl}/logo/logo.png`,
-  description:
-    "TechSolutionHub delivers AI automation, web development, SEO, chatbots, calling agents, workflow automation, and GHL pipeline setup.",
-  email: siteConfig.email,
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+92-312-8572868",
-    contactType: "customer service",
-    email: siteConfig.email,
-    url: `${siteUrl}/contact`,
-    availableLanguage: ["English", "Urdu"],
-  },
-  knowsAbout: [
-    "AI Automation",
-    "Web Development",
-    "SEO",
-    "AI Chatbots",
-    "AI Calling Agents",
-    "Workflow Automation",
-    "GHL Pipeline Setup",
-    "API Integrations",
-    "Shopify Development",
-    "Cloud Deployment",
-  ],
-  sameAs: [
-    siteConfig.social.linkedin,
-    siteConfig.social.instagram,
-    siteConfig.social.facebook,
-    siteConfig.social.github,
-  ],
-};
-
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "TechSolutionHub",
-  url: siteUrl,
-  description: siteConfig.description,
-  publisher: {
-    "@type": "Organization",
-    name: "TechSolutionHub",
-    url: siteUrl,
-  },
+export const viewport: Viewport = {
+  themeColor: "#3b82f6",
 };
 
 export default function RootLayout({
@@ -81,7 +32,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} h-full`}>
       <body className="min-h-full flex flex-col antialiased">
         <GoogleAnalytics />
-        <JsonLd data={[organizationSchema, websiteSchema]} />
+        <JsonLd data={organizationSchema} />
         <LoadingScreen />
         <Navbar />
         <main className="flex-1">

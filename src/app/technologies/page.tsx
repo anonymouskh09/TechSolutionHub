@@ -7,8 +7,8 @@ import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata(
-  "Technologies | Tools & Platforms We Use",
-  "Explore the technologies TechSolutionHub uses to build scalable web applications, AI automation systems, integrations, and modern digital platforms.",
+  "Our Technology Stack: Next.js, AI & n8n | TechSolutionHub",
+  "The technologies we use: Next.js, React, Node.js, OpenAI, LangChain, n8n, Shopify, AWS and more for scalable web, AI and automation projects.",
   "/technologies"
 );
 

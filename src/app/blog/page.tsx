@@ -7,8 +7,8 @@ import { BreadcrumbSchema } from "@/components/shared/BreadcrumbSchema";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata(
-  "Blog | AI Automation, Web Development & Digital Growth Insights",
-  "Read TechSolutionHub insights about AI automation, websites, SEO, workflow automation, chatbots, and digital business growth.",
+  "Blog: AI Automation & Web Development | TechSolutionHub",
+  "Guides and insights on AI automation, chatbots, web development, SEO and workflow automation from the TechSolutionHub team. Read the latest posts.",
   "/blog"
 );
 

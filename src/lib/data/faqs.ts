@@ -4,7 +4,7 @@ export const faqs: FAQ[] = [
   {
     question: "What services does TechSolutionHub offer?",
     answer:
-      "We offer 12 core services including AI automation, AI chatbots, AI calling agents, Next.js web development, Shopify development, SEO optimization, GoHighLevel pipeline setup, API integrations, workflow automation (n8n), cloud deployment, server migration, and full SaaS platform development.",
+      "We offer AI automation, AI chatbots, AI calling agents, Next.js web development, mobile app development, custom software development, UI/UX and graphic design, SEO, digital marketing, Shopify development, GoHighLevel pipeline setup, API integrations, workflow automation (n8n, Make, Zapier), SaaS development, cloud deployment, and server migration.",
   },
   {
     question: "How long does a typical project take?",
@@ -14,7 +14,7 @@ export const faqs: FAQ[] = [
   {
     question: "Do you work with international clients?",
     answer:
-      "Yes. We serve clients worldwide across US, UK, UAE, Pakistan, and Europe. Communication is in English with flexible meeting times across time zones.",
+      "Yes. We work with clients in the United States, United Kingdom, Canada, Australia, the UAE, and Europe. Communication is in English with flexible meeting times across time zones.",
   },
   {
     question: "What is your development process?",

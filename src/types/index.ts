@@ -12,7 +12,11 @@ export type ServiceIconName =
   | "Workflow"
   | "Cloud"
   | "Server"
-  | "Layers";
+  | "Layers"
+  | "Smartphone"
+  | "Code"
+  | "Palette"
+  | "Megaphone";
 
 export interface Service {
   slug: string;
@@ -21,6 +25,14 @@ export interface Service {
   description: string;
   features: string[];
   longDescription?: string;
+  /** Keyword-focused H1 for the service detail page */
+  h1?: string;
+  /** schema.org Service.serviceType */
+  serviceType?: string;
+  /** "Who it's for" list on the service detail page */
+  idealFor?: string[];
+  /** Slugs of related services for internal linking */
+  related?: string[];
 }
 
 export interface PortfolioProject {

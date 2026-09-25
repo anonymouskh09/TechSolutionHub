@@ -16,7 +16,7 @@ export function PortfolioPreview() {
             Our Recent Work
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            Delivering results for clients worldwide
+            Websites, AI platforms, and SaaS products we have delivered
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
