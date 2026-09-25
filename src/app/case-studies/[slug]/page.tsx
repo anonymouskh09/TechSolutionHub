@@ -20,10 +20,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const study = getCaseStudyBySlug(slug);
   if (!study) return { title: "Case Study Not Found" };
 
+  // TODO: remove noIndex once the full case study (challenge, solution,
+  // verified results) is published for this project.
   return createPageMetadata(
-    `${study.title} | TechSolutionHub Case Study`,
+    `${study.client} Case Study | TechSolutionHub`,
     study.excerpt,
-    `/case-studies/${slug}`
+    `/case-studies/${slug}`,
+    { noIndex: true }
   );
 }
 

@@ -9,8 +9,8 @@ import { createPageMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/utils";
 
 export const metadata: Metadata = createPageMetadata(
-  "Contact TechSolutionHub | Start Your Digital Project",
-  "Contact TechSolutionHub to discuss AI automation, website development, SEO, chatbots, calling agents, GHL pipelines, and digital solutions.",
+  "Contact Us | Get a Free Project Quote | TechSolutionHub",
+  "Contact TechSolutionHub about AI automation, web or mobile apps, custom software, SEO or design. Send your project details; we reply within 24 hours.",
   "/contact"
 );
 
@@ -24,7 +24,7 @@ export default function ContactPage() {
         ]}
       />
       <PageHeader
-        title="Contact Us"
+        title="Contact TechSolutionHub"
         description="Tell us about your project — we reply within 24 hours"
       />
       <section className="bg-white py-12 md:py-20">

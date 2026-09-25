@@ -8,8 +8,8 @@ import { CTABanner } from "@/components/sections/CTABanner";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata(
-  "Case Studies | TechSolutionHub Digital Project Results",
-  "Explore TechSolutionHub case studies showing modern websites, AI platforms, automation systems, and business-focused digital solutions.",
+  "Client Case Studies | TechSolutionHub",
+  "Read how TechSolutionHub plans and delivers websites, AI automation platforms and international B2B lead generation projects. See the approach.",
   "/case-studies"
 );
 
@@ -23,8 +23,8 @@ export default function CaseStudiesPage() {
         ]}
       />
       <PageHeader
-        title="Case Studies"
-        description="Measurable outcomes for clients worldwide"
+        title="Client Case Studies"
+        description="How we approach web, AI, and growth projects for our clients"
       />
       <section className="bg-white py-12 md:py-20">
         <div className="mx-auto max-w-4xl space-y-8 px-4 md:px-6">
