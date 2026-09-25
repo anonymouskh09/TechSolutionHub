@@ -35,7 +35,12 @@ export function PortfolioGrid() {
       </div>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {filtered.map((project, index) => (
-          <PortfolioCard key={project.slug} project={project} index={index} />
+          <PortfolioCard
+            key={project.slug}
+            project={project}
+            index={index}
+            headingLevel="h2"
+          />
         ))}
       </div>
     </>

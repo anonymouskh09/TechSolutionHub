@@ -6,8 +6,8 @@ import { CTABanner } from "@/components/sections/CTABanner";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata(
-  "Portfolio | TechSolutionHub Projects & Case Studies",
-  "View TechSolutionHub portfolio projects including web development, AI platforms, e-commerce stores, news websites, and digital solutions.",
+  "Portfolio: Web, AI & SaaS Projects | TechSolutionHub",
+  "Browse our portfolio of Next.js websites, AI automation platforms, SaaS products and news portals built for clients. Start a project like these today.",
   "/portfolio"
 );
 
@@ -21,8 +21,8 @@ export default function PortfolioPage() {
         ]}
       />
       <PageHeader
-        title="Our Portfolio"
-        description="Delivering results for clients worldwide"
+        title="Web, AI & SaaS Project Portfolio"
+        description="Websites, AI platforms, and SaaS products we have built for clients"
       />
       <section className="bg-white py-12 md:py-20">
         <div className="mx-auto max-w-7xl px-4 md:px-6">

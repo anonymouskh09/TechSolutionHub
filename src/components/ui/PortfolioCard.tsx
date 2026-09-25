@@ -5,14 +5,21 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import type { PortfolioProject } from "@/types";
+import { getPortfolioImageAlt } from "@/lib/data/portfolio";
 import { cn } from "@/lib/utils";
 
 interface PortfolioCardProps {
   project: PortfolioProject;
   index?: number;
+  /** Use "h2" when the card sits directly under the page H1 */
+  headingLevel?: "h2" | "h3";
 }
 
-export function PortfolioCard({ project, index = 0 }: PortfolioCardProps) {
+export function PortfolioCard({
+  project,
+  index = 0,
+  headingLevel: Heading = "h3",
+}: PortfolioCardProps) {
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}
@@ -30,7 +37,7 @@ export function PortfolioCard({ project, index = 0 }: PortfolioCardProps) {
           <Image
             key={project.slug}
             src={project.image}
-            alt={`TechSolutionHub ${project.title} web development project screenshot`}
+            alt={getPortfolioImageAlt(project)}
             fill
             unoptimized
             className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
@@ -41,7 +48,7 @@ export function PortfolioCard({ project, index = 0 }: PortfolioCardProps) {
           </span>
         </div>
         <div className="p-6">
-          <h3 className="mb-2 text-xl font-bold text-dark">{project.title}</h3>
+          <Heading className="mb-2 text-xl font-bold text-dark">{project.title}</Heading>
           <p className="mb-4 text-sm text-muted-foreground line-clamp-2">
             {project.description}
           </p>
