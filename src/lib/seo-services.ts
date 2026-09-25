@@ -1,78 +1,102 @@
-/** Unique SEO titles & descriptions per service page */
+/** Unique SEO titles & descriptions per service page (title ≤60, description ≤155 chars) */
 export const serviceSeo: Record<
   string,
   { title: string; description: string; keywords: string }
 > = {
   "ai-automation": {
-    title: "AI Automation Services | TechSolutionHub",
+    title: "AI Automation Services for Business | TechSolutionHub",
     description:
-      "Scale your business with custom AI automation services, intelligent workflows, n8n integrations, and process automation from TechSolutionHub.",
+      "AI automation services that cut manual work: intelligent workflows, n8n, lead routing and document processing. Book a free automation consultation.",
     keywords: "AI Automation Services",
   },
   "ai-chatbots": {
-    title: "AI Chatbot Development | TechSolutionHub",
+    title: "Custom AI Chatbot Development | TechSolutionHub",
     description:
-      "Build GPT-powered AI chatbots for websites, WhatsApp, and support channels with training, analytics, and human handoff.",
+      "Custom AI chatbot development for websites, WhatsApp and support, trained on your data with analytics and human handoff. Get a free chatbot demo.",
     keywords: "AI Chatbot Development",
   },
   "ai-calling-agents": {
-    title: "AI Calling Agents | TechSolutionHub",
+    title: "AI Voice Calling Agent Development | TechSolutionHub",
     description:
-      "Deploy AI calling agents for lead qualification, appointment booking, and CRM-integrated voice automation.",
-    keywords: "AI Calling Agents",
+      "AI voice calling agents that answer calls, qualify leads and book appointments, fully synced with your CRM. Talk to us about your AI voice agent.",
+    keywords: "AI Calling Agent Development",
   },
   "web-development": {
-    title: "Web Development Company | Next.js Experts",
+    title: "Next.js Web Development Company | TechSolutionHub",
     description:
-      "High-performance Next.js web development with TypeScript, SEO, and Core Web Vitals optimization for modern businesses.",
+      "Next.js web development for fast, SEO-ready websites and web apps with TypeScript and top Core Web Vitals. Request a free website quote today.",
     keywords: "Web Development Company",
   },
-  "shopify-development": {
-    title: "Shopify Development Services | TechSolutionHub",
+  "mobile-app-development": {
+    title: "Mobile App Development Company | TechSolutionHub",
     description:
-      "Custom Shopify store development with conversion-focused design, app integrations, and speed optimization.",
-    keywords: "Shopify Development",
+      "Mobile app development for iOS and Android: cross-platform apps, secure APIs and App Store launch support. Share your app idea for a free estimate.",
+    keywords: "Mobile App Development Company",
+  },
+  "custom-software-development": {
+    title: "Custom Software Development Company | TechSolutionHub",
+    description:
+      "Custom software development: business apps, internal tools, dashboards and legacy modernization built around your workflow. Get a free consultation.",
+    keywords: "Custom Software Development Company",
+  },
+  "ui-ux-design": {
+    title: "UI/UX & Graphic Design Services | TechSolutionHub",
+    description:
+      "UI/UX design and graphic design services: user research, wireframes, prototypes, design systems and brand visuals. Start your design project today.",
+    keywords: "UI/UX Design Services",
   },
   "seo-optimization": {
-    title: "SEO Optimization Services | TechSolutionHub",
+    title: "SEO Services & Technical SEO Agency | TechSolutionHub",
     description:
-      "Technical SEO, on-page optimization, and growth-focused SEO strategies that improve rankings and organic traffic.",
-    keywords: "SEO Optimization Services",
+      "SEO services covering technical audits, on-page optimization, content strategy and link building for global markets. Request a free SEO audit.",
+    keywords: "SEO Services",
+  },
+  "digital-marketing": {
+    title: "Digital Marketing Services | TechSolutionHub",
+    description:
+      "Digital marketing services: social media, Google and Meta ads, content marketing and conversion tracking that turn traffic into leads. Let's talk.",
+    keywords: "Digital Marketing Services",
+  },
+  "shopify-development": {
+    title: "Shopify Store Development Services | TechSolutionHub",
+    description:
+      "Shopify store development with custom themes, app integrations, payment setup and speed optimization for higher conversions. Get a Shopify quote.",
+    keywords: "Shopify Development Services",
   },
   "ghl-pipeline": {
-    title: "GHL Pipeline Setup | GoHighLevel CRM",
+    title: "GoHighLevel Setup & Automation | TechSolutionHub",
     description:
-      "Complete GoHighLevel pipeline setup with funnels, automations, email sequences, and lead tracking.",
-    keywords: "GHL Pipeline Setup",
+      "GoHighLevel CRM setup: sales pipelines, funnels, calendars, email/SMS automations and lead tracking so no lead is missed. Book a GHL setup call.",
+    keywords: "GoHighLevel Setup Services",
   },
   "api-integrations": {
-    title: "API Integrations | TechSolutionHub",
+    title: "API Integration Services | TechSolutionHub",
     description:
-      "Secure REST API, webhook, and OAuth integrations connecting your CRM, payments, and business tools.",
-    keywords: "API Integrations",
+      "API integration services connecting CRMs, payment gateways and business tools with secure REST, webhook and OAuth integrations. Discuss your project.",
+    keywords: "API Integration Services",
   },
   "workflow-automation": {
-    title: "Workflow Automation | n8n & Make",
+    title: "n8n, Make & Zapier Automation Services | TechSolutionHub",
     description:
-      "End-to-end workflow automation with n8n, Make, and Zapier for scalable business operations.",
-    keywords: "Workflow Automation",
-  },
-  "cloud-deployment": {
-    title: "Cloud Deployment Services | AWS & Vercel",
-    description:
-      "Production cloud deployment on AWS, Vercel, and Cloudflare with CI/CD, monitoring, and auto scaling.",
-    keywords: "Cloud Deployment",
-  },
-  "server-migration": {
-    title: "Server Migration Services | Zero Downtime",
-    description:
-      "Zero-downtime server migration, SSL setup, data integrity, and performance tuning for modern stacks.",
-    keywords: "Server Migration",
+      "Workflow automation with n8n, Make and Zapier: we map, build and monitor automations that save your team hours every week. Book a free call.",
+    keywords: "n8n Automation Services",
   },
   "saas-development": {
-    title: "SaaS Development | Full-Stack Platforms",
+    title: "SaaS Application Development | TechSolutionHub",
     description:
-      "Full-stack SaaS development with auth, Stripe billing, admin dashboards, and scalable multi-tenant architecture.",
-    keywords: "SaaS Development",
+      "SaaS development from MVP to scale: multi-tenant architecture, Stripe billing, authentication and admin dashboards. Plan your SaaS build with us.",
+    keywords: "SaaS Development Company",
+  },
+  "cloud-deployment": {
+    title: "Cloud Deployment: AWS, Vercel & Cloudflare | TechSolutionHub",
+    description:
+      "Cloud deployment on AWS, Vercel and Cloudflare with CI/CD, monitoring and auto scaling for reliable global performance. Get a deployment plan.",
+    keywords: "Cloud Deployment Services",
+  },
+  "server-migration": {
+    title: "Zero-Downtime Server Migration | TechSolutionHub",
+    description:
+      "Zero-downtime server migration covering DNS, SSL, data integrity and post-migration performance tuning. Move your site safely; contact us.",
+    keywords: "Server Migration Services",
   },
 };
