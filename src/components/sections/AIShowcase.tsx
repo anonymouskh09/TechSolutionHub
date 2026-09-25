@@ -7,7 +7,7 @@ import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { Button } from "@/components/ui/button";
 
 const features = [
-  "Reduce manual work by up to 80% with intelligent workflows",
+  "Cut repetitive manual work with intelligent AI workflows",
   "Connect CRM, email, chat, and phone in one automation layer",
   "Scale operations without proportional headcount growth",
   "Real-time analytics and AI-driven decision support",

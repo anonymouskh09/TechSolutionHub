@@ -36,7 +36,7 @@ export function Hero() {
             transition={{ delay: 0.1 }}
             className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary md:mb-6"
           >
-            ⚡ Premium AI Automation Agency
+            ⚡ Global Software & AI Automation Agency
           </motion.span>
 
           <motion.h1
@@ -45,11 +45,10 @@ export function Hero() {
             transition={{ delay: 0.25 }}
             className="text-4xl font-bold leading-tight tracking-tight text-dark md:text-5xl lg:text-6xl"
           >
-            Building{" "}
             <span className="bg-gradient-brand bg-clip-text text-transparent">
-              AI-Powered
+              AI Automation
             </span>{" "}
-            Digital Solutions for Modern Businesses
+            &amp; Software Development for Global Businesses
           </motion.h1>
 
           <motion.p
@@ -58,9 +57,9 @@ export function Hero() {
             transition={{ delay: 0.4 }}
             className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:mt-6 md:text-lg"
           >
-            We help businesses scale with AI automation, chatbot systems,
-            high-performance web applications, workflow automation, and
-            enterprise-grade development solutions.
+            Your technology partner in the US, UK, Canada, Australia, UAE, and
+            Europe — building AI chatbots, calling agents, web and mobile apps,
+            custom software, and SEO-driven growth.
           </motion.p>
 
           <motion.div

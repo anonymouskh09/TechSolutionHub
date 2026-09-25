@@ -9,9 +9,9 @@ export function TrustedBadges() {
   return (
     <SectionWrapper className="overflow-hidden border-y border-border bg-muted/30 py-12">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <h2 className="mb-8 text-center text-sm font-semibold tracking-wide text-muted-foreground uppercase">
+        <p className="mb-8 text-center text-sm font-semibold tracking-wide text-muted-foreground uppercase">
           Trusted Technologies We Work With
-        </h2>
+        </p>
         <div className="relative">
           <div className="flex animate-marquee gap-12 whitespace-nowrap">
             {items.map((tech, i) => (
