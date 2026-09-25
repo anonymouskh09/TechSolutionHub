@@ -11,6 +11,10 @@ import {
   Cloud,
   Server,
   Layers,
+  Smartphone,
+  Code,
+  Palette,
+  Megaphone,
 } from "lucide-react";
 import type { IconMap } from "@/types";
 
@@ -27,4 +31,8 @@ export const serviceIcons: IconMap = {
   Cloud,
   Server,
   Layers,
+  Smartphone,
+  Code,
+  Palette,
+  Megaphone,
 };
